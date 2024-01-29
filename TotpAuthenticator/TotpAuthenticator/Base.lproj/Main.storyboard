@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25L-Tk-97f">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Qr And Authenticator View Controller-->
+        <scene sceneID="GRt-Ao-JFQ">
+            <objects>
+                <viewController id="25L-Tk-97f" customClass="QrAndAuthenticatorViewController" customModule="TotpAuthenticator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qye-sL-9sE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1d-0E-7Ce">
+                                <rect key="frame" x="71.666666666666686" y="313.66666666666669" width="250" height="250.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3NG-yg-lOf"/>
+                                    <constraint firstAttribute="width" constant="250" id="JYW-6J-xdh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEL-3Y-j7m">
+                                <rect key="frame" x="151.66666666666666" y="613.66666666666663" width="89.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Totp"/>
+                                <connections>
+                                    <action selector="btnGetTotp:" destination="25L-Tk-97f" eventType="touchUpInside" id="TDX-6t-Ffk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5D-nu-0qj">
+                                <rect key="frame" x="86.666666666666686" y="698.66666666666663" width="220" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add To Authenticator App"/>
+                                <connections>
+                                    <action selector="btnAddToAuthenticatorApp:" destination="25L-Tk-97f" eventType="touchUpInside" id="hvk-ku-46P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tox-Em-kTe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1d-0E-7Ce" firstAttribute="centerY" secondItem="tox-Em-kTe" secondAttribute="centerY" id="1WF-6s-vcC"/>
+                            <constraint firstItem="dEL-3Y-j7m" firstAttribute="top" secondItem="Y1d-0E-7Ce" secondAttribute="bottom" constant="50" id="7Yv-CM-sD2"/>
+                            <constraint firstItem="Y1d-0E-7Ce" firstAttribute="centerX" secondItem="tox-Em-kTe" secondAttribute="centerX" id="9VQ-h4-LRJ"/>
+                            <constraint firstItem="L5D-nu-0qj" firstAttribute="top" secondItem="dEL-3Y-j7m" secondAttribute="bottom" constant="50" id="A3o-uS-oJp"/>
+                            <constraint firstItem="dEL-3Y-j7m" firstAttribute="centerX" secondItem="tox-Em-kTe" secondAttribute="centerX" id="Fgn-eO-35W"/>
+                            <constraint firstItem="L5D-nu-0qj" firstAttribute="centerX" secondItem="tox-Em-kTe" secondAttribute="centerX" id="e3f-VE-8Xw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrImageView" destination="Y1d-0E-7Ce" id="9H2-4E-igE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN3-ht-nEN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
